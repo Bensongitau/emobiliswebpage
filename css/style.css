@@ -1,31 +1,64 @@
-form {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    border-radius: 8px;
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
 }
-label {
-    display: block;
-    margin-bottom:5px;
-    font-weight: bold;
+
+h1, h3 {
+    color: #333;
+}
+
+/* Navbar customization */
+.navbar {
+    border-bottom: 2px solid #ddd;
+}
+
+.navbar-brand img {
+    border-radius: 50%;
+}
+
+.navbar-nav .nav-link {
+    color: #007bff;
+    margin-right: 15px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #0056b3;
+}
+
+/* Header section */
+header {
+    background-color: #f1f1f1;
+    padding: 40px 20px;
+    border-radius: 10px;
+}
+
+header img {
+    border: 5px solid #007bff;
+}
+
+/* Section styling */
+section {
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer styling */
+footer {
+    background-color: #007bff;
     color: white;
-    padding: 10px;
+    padding: 20px;
+    border-radius: 10px;
 }
-input[type="text"],
-input[type="number"],
-input[type="file"],
-input[type="email"],
-input[type="submit"],
-input[type="reset"],
-select {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 5px;
-    border-radius: 4px;
+
+footer a {
+    color: white;
+    text-decoration: none;
 }
-input[type="submit"]{
-    background-color: blue;
-}
-input[type="reset"]{
-    background-color: red;
+
+footer a:hover {
+    text-decoration: underline;
 }

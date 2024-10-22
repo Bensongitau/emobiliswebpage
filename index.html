@@ -1,197 +1,76 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <!--  meta data of the page : more: title -->
     <meta charset="UTF-8">
-    <title>Emobilis</title>
-<!--    link to the file -->
-    <link href="css/style.css" rel="stylesheet"/>
-<!--    internal css -->
-    <style>
-    /*  css code   */
-    button {
-        background-color: green;
-        color: white;
-        padding: 10px;
-        margin: 10px;
-        border-radius: 5px;
-    }
-    /* to syle using an id , place # infront of the id name*/
-    #btnSubmit {
-        background-color: blue;
-        color: white;
-        padding: 10px;
-        margin: 10px;
-        border-radius: 5px;
-    }
-
-    /* to style using a class , place . infront of the class name */
-    .table {
-        width: 100%;
-        margin: 20px;
-        padding: 10px;
-        font-family: Cambria;
-    }
-
-    td {
-        padding: 12px;
-        text-align: center;
-        border: 1px solid grey;
-    }
-
-
-    </style>
-
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benson's Portfolio</title>
+    <!-- Link to Bootstrap -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Link to custom stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
 </head>
-<body style="background-color: black; color: white; ">
-<!-- ctrl + / -->
-<!--inside i can write a comment -->
-<!--   what your user can see :: inline / block element-->
-<!--examples of block level elements -->
-<!--common text based elements -->
-<p style="font-family: 'Calibri Light'; font-weight: bold; color: purple;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-    standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
-    type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-    remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-    Lorem Ipsum passages,
-    and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-<!--lists-->
-<!--ordered elements -->
-<ol>
-    <li>AFC Leopards</li>
-    <li>GOR Mahia</li>
-    <li>Sofapaka</li>
-    <li>Tusker FC</li>
-</ol>
-<!--unordered elements-->
-<ul>
-    <li>AFC Leopards</li>
-    <li>GOR Mahia</li>
-    <li>Sofapaka</li>
-    <li>Tusker FC</li>
-</ul>
-<!--headers -->
-<h1>Heading 1</h1>
-<h6>Heading 2</h6>
-<!--blockquotes-->
-<blockquote>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-    industry's
-    standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
-    type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-    remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-    Lorem Ipsum passages,
-</blockquote>
+<body>
+    <div class="container">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light mb-5">
 
-<!--examples of inline elements -->
-<!-- buttons -->
-<button>Click ME</button>
-<button id="btnSubmit">Submit Button</button>
-<!--image-->
-<img src="assets/myimage.jpeg" width="200" height="200" alt="Some image here"/>
-<!--table-->
-<table class="table">
-    <thead>
-    <th>Position</th>
-    <th>Team Name</th>
-    <th>Points</th>
-    </thead>
-    <tbody>
-    <tr>
-        <td>1</td>
-        <td>AFC Leopards</td>
-        <td>30</td>
-    </tr>
-    <tr>
-        <td>2</td>
-        <td>Sofapaka</td>
-        <td>29</td>
-    </tr>
-    <tr>
-        <td>3</td>
-        <td>Gor Mahia</td>
-        <td>28</td>
-    </tr>
-    </tbody>
-    <tfoot>
-    <tr>
-        <td colspan="2">Total Ticket pricing</td>
-        <td>$5.50</td>
-    </tr>
-    </tfoot>
-</table>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="public/contact.html">Contact Me</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
 
-<table>
-    <thead>
-    <th>Position</th>
-    <th>Team Name</th>
-    <th>Points</th>
-    </thead>
-    <tbody>
-    <tr>
-        <td>1</td>
-        <td>AFC Leopards</td>
-        <td>30</td>
-    </tr>
-    <tr>
-        <td>2</td>
-        <td>Sofapaka</td>
-        <td>29</td>
-    </tr>
-    <tr>
-        <td>3</td>
-        <td>Gor Mahia</td>
-        <td>28</td>
-    </tr>
-    </tbody>
-    <tfoot>
-    <tr>
-        <td colspan="2">Total Ticket pricing</td>
-        <td>$5.50</td>
-    </tr>
-    </tfoot>
-</table>
-<!--form -->
-<form method="POST">
-    <label>Team Name</label>
-    <input type="text" placeholder="Enter Team Name" name="team_name"/>
-    <label>Season Points</label>
-    <input type="number" placeholder="Enter Points" name="team_points"/>
-    <label>Team Email</label>
-    <input type="email" placeholder="Enter Team Email" name="team_email"/>
-    <label>Team Picture</label>
-    <input type="file"  name="team_pic"/>
-    <label>Home team Color</label>
-    <select name="team_color">
-        <option value="red">Red</option>
-        <option value="green">Green</option>
-        <option value="purple">Purple</option>
-    </select>
-    <input type="submit" value="Submit Team"/>
-    <input type="reset" value="Reset Form">
-</form>
+        <!-- Header Section -->
+        <header class="text-center mb-5">
+            <img src="assets/ben.jpg" alt="Benson's Profile Image" class="rounded-circle mb-3" width="150">
+            <h1>Hi, I'm Benson</h1>
+            <p>Welcome to My Personal Portfolio</p>
+        </header>
 
+        <!-- Skills and Hobbies Section -->
+        <section id="about" class="mb-5">
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <h3>Skills</h3>
+                    <ul>
+                        <li>Web Development</li>
+                        <li>3D Design</li>
+                        <li>Data Analytics</li>
+                        <li>Database Management (MySQL, MongoDB)</li>
+                        <li>3D Modelling</li>
 
+                    </ul>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <h3>Interests</h3>
+                    <ul>
+                        <li>Travelling</li>
+                        <li>Riding</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer Section -->
+        <footer class="text-center mt-5">
+            <p>Follow me on social media:</p>
+            <a href="https://x.com/home" target="_blank">Twitter</a> |
+            <a href="https://www.instagram.com/wam_buakelvin" target="_blank">Instagram</a>
+        </footer>
+    </div>
+
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
